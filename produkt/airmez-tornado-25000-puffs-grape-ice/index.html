@@ -32,18 +32,38 @@
 <header class="site-head">
   <div class="wrap head-in">
     <a class="logo" href="/"><span class="logo-mark">V</span>AiRMEZ · VapePL</a>
-    <nav aria-label="Nawigacja główna">
-      <a href="/produkty/">Produkty</a>
-      <a href="/#modele">Modele</a>
-      <a href="/blog/">Blog</a>
-      <a href="/faq/">FAQ</a>
-      <a href="/o-airmez/">O marce</a>
-    </nav>
+    <nav aria-label="Nawigacja główna" class="head-nav"><a href="/produkty/">Produkty</a><a href="/#modele">Modele</a><a href="/blog/">Blog</a><a href="/faq/">FAQ</a><a href="/o-airmez/">O marce</a></nav>
     <a class="head-cta" href="https://vapepl.com/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=header" target="_blank" rel="noopener">Kup na VapePL.COM →</a>
+    <button class="nav-toggle" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
+    </button>
   </div>
 </header>
-<div class="trust-bar wrap" role="note"><span>&#10003; Wysyłka z Polski — realizacja 24–48h</span><span>&#10003; 30 dni na zwrot</span><span>&#10003; Rabaty ilościowe do −20%</span><span>&#10003; Tylko dla osób 18+</span></div>
-<main class="wrap"><nav class="crumbs" aria-label="Ścieżka nawigacji"><a href="https://airmez.vapepl.com/">AiRMEZ</a><span class="sep">›</span><a href="https://airmez.vapepl.com/produkty/">Produkty</a><span class="sep">›</span><a href="https://airmez.vapepl.com/model/airmez-tornado-25000-puffs/">AiRMEZ TORNADO 25000 PUFFS</a><span class="sep">›</span>Grape ice</nav>
+<div class="nav-drawer" id="mobile-menu" hidden>
+  <div class="nav-drawer-backdrop" data-nav-close></div>
+  <div class="nav-drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="nav-drawer-head">
+      <span class="nav-drawer-title">Menu</span>
+      <button class="nav-drawer-close" type="button" aria-label="Zamknij menu" data-nav-close>×</button>
+    </div>
+    <nav class="nav-drawer-links" aria-label="Menu mobilne"><a href="/produkty/">Produkty</a><a href="/#modele">Modele</a><a href="/blog/">Blog</a><a href="/faq/">FAQ</a><a href="/o-airmez/">O marce</a></nav>
+    <a class="btn-buy lg nav-drawer-cta" href="https://vapepl.com/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=drawer" target="_blank" rel="noopener">Kup na VapePL.COM →</a>
+  </div>
+</div>
+<main class="wrap">
+<script>
+(function(){
+  var drawer=document.getElementById("mobile-menu");
+  var toggle=document.querySelector(".nav-toggle");
+  function open(){drawer.hidden=false;toggle.setAttribute("aria-expanded","true");document.body.classList.add("nav-open");}
+  function close(){drawer.hidden=true;toggle.setAttribute("aria-expanded","false");document.body.classList.remove("nav-open");}
+  toggle.addEventListener("click",function(){drawer.hidden?open():close();});
+  drawer.addEventListener("click",function(e){if(e.target.hasAttribute("data-nav-close"))close();});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!drawer.hidden)close();});
+  // 同页锚点跳转不会卸载页面，需显式关闭抽屉
+  drawer.querySelectorAll(".nav-drawer-links a").forEach(function(a){a.addEventListener("click",close);});
+})();
+</script><nav class="crumbs" aria-label="Ścieżka nawigacji"><a href="https://airmez.vapepl.com/">AiRMEZ</a><span class="sep">›</span><a href="https://airmez.vapepl.com/produkty/">Produkty</a><span class="sep">›</span><a href="https://airmez.vapepl.com/model/airmez-tornado-25000-puffs/">AiRMEZ TORNADO 25000 PUFFS</a><span class="sep">›</span>Grape ice</nav>
 <div class="prod-layout">
   <div class="prod-media"><img src="/assets/img/4ee77bea91148eac-480.webp" alt="AiRMEZ TORNADO 25000 PUFFS — Grape ice" width="460" height="460" fetchpriority="high" decoding="async"></div>
   <div class="prod-info">
@@ -54,20 +74,24 @@
     <a class="btn-buy lg" href="https://vapepl.com/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=product-airmez-tornado-25000-puffs-grape-ice" target="_blank" rel="noopener">Kup AiRMEZ TORNADO 25000 PUFFS na VapePL.COM</a>
     <p class="tiers-note">Darmowa realizacja zamówienia na vapepl.com · rabaty ilościowe 3+ szt. −5% … 15+ szt. −20% · 30 dni na zwrot</p>
     <section id="szybka-odpowiedz" class="panel q-answer">
-      <h2>Szybka odpowiedź</h2>
-      <p>AiRMEZ TORNADO 25000 PUFFS – Potęga smaku i wydajności w jednym urządzeniu
+      <div class="panel-side"></div><div class="panel-main">
+        <h2>Szybka odpowiedź</h2>
+        <p>AiRMEZ TORNADO 25000 PUFFS – Potęga smaku i wydajności w jednym urządzeniu
 Szukasz jednorazowego e-papierosa, który łączy olbrzymią pojemność, niesamowitą trwałość i bogactwo aromatów? AiRMEZ TORNADO 25000 PUFFS to odpowiedź na potrzeby najbardziej wymagających użytkowników. Z 25 ml e-liquidu, baterią 850 mAh i aż 25 000 zaciągnięć, ten model redefiniuje standardy w kategorii urządzeń jednorazowych, oferując technologię Mesh Coil i niepowtarzalne doznania smakowe.</p>
+      </div>
     </section>
     <section class="flavor-profile panel">
-      <h2>Profil smakowy</h2>
-      <p>Wariant Grape ice: profil lodowy / owocowy — wyraźnie chłodzący, odświeżający finisz — latem i poza sezonem; owocowy środek smaku z soczystym, słodkim charakterem. Do 25 000 zaciągnięć z jednego urządzenia. Obecnie w promocji 13% poniżej ceny regularnej.</p>
-      <ul class="fam-list"><li><strong>Menthol &amp; Ice</strong> — wyraźnie chłodzący, odświeżający finisz — latem i poza sezonem</li><li><strong>Fruity</strong> — owocowy środek smaku z soczystym, słodkim charakterem</li></ul>
+      <div class="panel-side"></div><div class="panel-main">
+        <h2>Profil smakowy</h2>
+        <p>Wariant Grape ice: profil lodowy / owocowy — wyraźnie chłodzący, odświeżający finisz — latem i poza sezonem; owocowy środek smaku z soczystym, słodkim charakterem. Do 25 000 zaciągnięć z jednego urządzenia. Obecnie w promocji 13% poniżej ceny regularnej.</p>
+        <ul class="fam-list"><li><strong>Menthol &amp; Ice</strong> — wyraźnie chłodzący, odświeżający finisz — latem i poza sezonem</li><li><strong>Fruity</strong> — owocowy środek smaku z soczystym, słodkim charakterem</li></ul>
+      </div>
     </section>
     <h2>Specyfikacja</h2>
     <p>Pełna specyfikacja: <a href='/model/airmez-tornado-25000-puffs/'>strona modelu AiRMEZ TORNADO 25000 PUFFS</a>.</p>
     <h2>Inne smaki tej serii</h2>
     <div class="flavor-tags"><a class="flavor-tag" style="--cc:#d97706" href="/produkt/airmez-tornado-25000-puffs-berry-lemonade/">Berry Lemonade</a><a class="flavor-tag" style="--cc:#0891b2" href="/produkt/airmez-tornado-25000-puffs-blueberry-on-ice/">BLUEBERRY ON ICE</a><a class="flavor-tag" style="--cc:#16a34a" href="/produkt/airmez-tornado-25000-puffs-cherry/">Cherry</a><a class="flavor-tag" style="--cc:#16a34a" href="/produkt/airmez-tornado-25000-puffs-dragon-fruit/">Dragon Fruit</a><a class="flavor-tag" style="--cc:#16a34a" href="/produkt/airmez-tornado-25000-puffs-kiwi-passion-fruit-guava/">Kiwi Passion Fruit Guava</a><a class="flavor-tag" style="--cc:#16a34a" href="/produkt/airmez-tornado-25000-puffs-lemon-lime/">LEMON LIME</a></div>
-    <h2>Zobacz w blogu</h2><ul class='link-list'><li><a href="/blog/airmez-30k-puffs-quick-end-kompletny-przewodnik/">Airmez 30K Puffs Quick End — Kompletny Przewodnik</a></li><li><a href="/blog/airmez-4in1-co-to-jest-i-czy-warto/">Airmez 4in1 – co to jest i czy warto?</a></li><li><a href="/blog/airmez-4in1-fox-e-papieros-z-4-smakami-w-jednym-urzadzeniu/">AiRMEZ 4IN1 FOX – e-papieros z 4 smakami w jednym urządzeniu</a></li><li><a href="/blog/airmez-4in1-jak-dziala-i-dlaczego-warto-wybrac-ten-model/">Airmez 4in1 – jak dziala i dlaczego warto wybrac ten model</a></li></ul>
+    <h2>Zobacz w blogu</h2><ul class='link-list'><li><a href="/blog/airmez-30k-puffs-matrix-pro-co-warto-wiedziec/">Airmez 30k Puffs Matrix Pro – co warto wiedzieć</a></li><li><a href="/blog/airmez-30k-puffs-quick-end-kompletny-przewodnik/">Airmez 30K Puffs Quick End — Kompletny Przewodnik</a></li><li><a href="/blog/airmez-4in1-co-to-jest-i-czy-warto/">Airmez 4in1 – co to jest i czy warto?</a></li><li><a href="/blog/airmez-4in1-fox-e-papieros-z-4-smakami-w-jednym-urzadzeniu/">AiRMEZ 4IN1 FOX – e-papieros z 4 smakami w jednym urządzeniu</a></li></ul>
     <section id="faq">
       <h2>Najczęstsze pytania o ten wariant</h2>
       <div class="faq-list"><details><summary>Ile kosztuje wariant Grape ice?</summary><div class='faq-a'>Aktualna cena to 65 zł (regularnie 75 zł, czyli rabat 13%). Przy 3+ sztukach dodatkowy rabat do −20%. Zamówienie składasz na vapepl.com.</div></details><details><summary>Czy ten smak jest dostępny?</summary><div class='faq-a'>Tak — wariant jest na stanie i gotowy do wysyłki z Polski.</div></details><details><summary>Jak smakują Menthol &amp; Ice i Fruity?</summary><div class='faq-a'>Wyraźnie chłodzący, odświeżający finisz — latem i poza sezonem. Owocowy środek smaku z soczystym, słodkim charakterem. Wariant jest wstępnie napełniony gotowym liquidem — wyciągasz i używasz.</div></details><details><summary>Na ile starczy 25000 puffs?</summary><div class='faq-a'>Przy 20–30 zaciągnięciach dziennie urządzenie starcza na ponad 2–3 lat codziennego używania; przy intensywniejszym tempie proporcjonalnie krócej.</div></details></div>
@@ -83,7 +107,7 @@ Szukasz jednorazowego e-papierosa, który łączy olbrzymią pojemność, niesam
       <span class="price">65 zł</span>
       <span class="price-old">75 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-berry-lemonade" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-berry-lemonade" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/airmez-tornado-25000-puffs-blueberry-on-ice/"><img src="/assets/img/4ee77bea91148eac-480.webp" alt="AiRMEZ TORNADO 25000 PUFFS — BLUEBERRY ON ICE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -94,7 +118,7 @@ Szukasz jednorazowego e-papierosa, który łączy olbrzymią pojemność, niesam
       <span class="price">65 zł</span>
       <span class="price-old">75 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-blueberry-on-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-blueberry-on-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/airmez-tornado-25000-puffs-cherry/"><img src="/assets/img/4ee77bea91148eac-480.webp" alt="AiRMEZ TORNADO 25000 PUFFS — Cherry" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -105,7 +129,7 @@ Szukasz jednorazowego e-papierosa, który łączy olbrzymią pojemność, niesam
       <span class="price">65 zł</span>
       <span class="price-old">75 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-cherry" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-cherry" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit sweet">
   <a class="card-media" href="/produkt/airmez-tornado-25000-puffs-dragon-fruit/"><img src="/assets/img/4ee77bea91148eac-480.webp" alt="AiRMEZ TORNADO 25000 PUFFS — Dragon Fruit" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -116,7 +140,7 @@ Szukasz jednorazowego e-papierosa, który łączy olbrzymią pojemność, niesam
       <span class="price">65 zł</span>
       <span class="price-old">75 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-dragon-fruit" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-dragon-fruit" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/airmez-tornado-25000-puffs-kiwi-passion-fruit-guava/"><img src="/assets/img/4ee77bea91148eac-480.webp" alt="AiRMEZ TORNADO 25000 PUFFS — Kiwi Passion Fruit Guava" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -127,7 +151,7 @@ Szukasz jednorazowego e-papierosa, który łączy olbrzymią pojemność, niesam
       <span class="price">65 zł</span>
       <span class="price-old">75 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-kiwi-passion-fruit-guava" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-kiwi-passion-fruit-guava" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/airmez-tornado-25000-puffs-lemon-lime/"><img src="/assets/img/4ee77bea91148eac-480.webp" alt="AiRMEZ TORNADO 25000 PUFFS — LEMON LIME" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -138,11 +162,10 @@ Szukasz jednorazowego e-papierosa, który łączy olbrzymią pojemność, niesam
       <span class="price">65 zł</span>
       <span class="price-old">75 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-lemon-lime" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-lemon-lime" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article></div></section>
 <section class="panel tiers" aria-label="Rabaty ilościowe"><div class="panel-side"></div><div class="panel-main"><h2>Rabaty ilościowe na VapePL.COM</h2><div class="tiers-grid"><div class="tier"><span class="tier-qty">3+ szt.</span><span class="tier-pct">−5%</span></div><div class="tier"><span class="tier-qty">5+ szt.</span><span class="tier-pct">−8%</span></div><div class="tier"><span class="tier-qty">10+ szt.</span><span class="tier-pct">−12%</span></div><div class="tier"><span class="tier-qty">15+ szt.</span><span class="tier-pct">−20%</span></div></div><p class="tiers-note">Im więcej sztuk, tym większa zniżka — rabat nalicza się automatycznie w koszyku.</p><p class="tiers-cta"><a class="btn-buy" href="https://vapepl.com/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=tiers" target="_blank" rel="noopener">Zamów z rabatem na VapePL.COM</a></p></div></section>
-<div class="sticky-cta"><span class="sticky-cta-info">Realizacja i płatność: <b>vapepl.com</b></span><a class="btn-buy" style="text-decoration:none" href="https://vapepl.com/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=sticky" target="_blank" rel="noopener">Kup na VapePL.COM</a></div>
 
 </main>
 <footer class="site-foot">

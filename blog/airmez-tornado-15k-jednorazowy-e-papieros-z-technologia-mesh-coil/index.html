@@ -31,18 +31,38 @@
 <header class="site-head">
   <div class="wrap head-in">
     <a class="logo" href="/"><span class="logo-mark">V</span>AiRMEZ · VapePL</a>
-    <nav aria-label="Nawigacja główna">
-      <a href="/produkty/">Produkty</a>
-      <a href="/#modele">Modele</a>
-      <a href="/blog/">Blog</a>
-      <a href="/faq/">FAQ</a>
-      <a href="/o-airmez/">O marce</a>
-    </nav>
+    <nav aria-label="Nawigacja główna" class="head-nav"><a href="/produkty/">Produkty</a><a href="/#modele">Modele</a><a href="/blog/">Blog</a><a href="/faq/">FAQ</a><a href="/o-airmez/">O marce</a></nav>
     <a class="head-cta" href="https://vapepl.com/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=header" target="_blank" rel="noopener">Kup na VapePL.COM →</a>
+    <button class="nav-toggle" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
+    </button>
   </div>
 </header>
-<div class="trust-bar wrap" role="note"><span>&#10003; Wysyłka z Polski — realizacja 24–48h</span><span>&#10003; 30 dni na zwrot</span><span>&#10003; Rabaty ilościowe do −20%</span><span>&#10003; Tylko dla osób 18+</span></div>
-<main class="wrap"><nav class="crumbs" aria-label="Ścieżka nawigacji"><a href="https://airmez.vapepl.com/">AiRMEZ</a><span class="sep">›</span><a href="https://airmez.vapepl.com/blog/">Blog</a><span class="sep">›</span>Airmez Tornado 15k - jednorazowy e-papieros z technologia Mesh Coil</nav>
+<div class="nav-drawer" id="mobile-menu" hidden>
+  <div class="nav-drawer-backdrop" data-nav-close></div>
+  <div class="nav-drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="nav-drawer-head">
+      <span class="nav-drawer-title">Menu</span>
+      <button class="nav-drawer-close" type="button" aria-label="Zamknij menu" data-nav-close>×</button>
+    </div>
+    <nav class="nav-drawer-links" aria-label="Menu mobilne"><a href="/produkty/">Produkty</a><a href="/#modele">Modele</a><a href="/blog/">Blog</a><a href="/faq/">FAQ</a><a href="/o-airmez/">O marce</a></nav>
+    <a class="btn-buy lg nav-drawer-cta" href="https://vapepl.com/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=drawer" target="_blank" rel="noopener">Kup na VapePL.COM →</a>
+  </div>
+</div>
+<main class="wrap">
+<script>
+(function(){
+  var drawer=document.getElementById("mobile-menu");
+  var toggle=document.querySelector(".nav-toggle");
+  function open(){drawer.hidden=false;toggle.setAttribute("aria-expanded","true");document.body.classList.add("nav-open");}
+  function close(){drawer.hidden=true;toggle.setAttribute("aria-expanded","false");document.body.classList.remove("nav-open");}
+  toggle.addEventListener("click",function(){drawer.hidden?open():close();});
+  drawer.addEventListener("click",function(e){if(e.target.hasAttribute("data-nav-close"))close();});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!drawer.hidden)close();});
+  // 同页锚点跳转不会卸载页面，需显式关闭抽屉
+  drawer.querySelectorAll(".nav-drawer-links a").forEach(function(a){a.addEventListener("click",close);});
+})();
+</script><nav class="crumbs" aria-label="Ścieżka nawigacji"><a href="https://airmez.vapepl.com/">AiRMEZ</a><span class="sep">›</span><a href="https://airmez.vapepl.com/blog/">Blog</a><span class="sep">›</span>Airmez Tornado 15k - jednorazowy e-papieros z technologia Mesh Coil</nav>
 <div class="article-layout">
   <article class="article-body">
     <span class="kicker sm">Poradnik AiRMEZ</span>
@@ -53,7 +73,7 @@
 <p>Wielu uzytkownikow szukajacych wygodnego jednorazowego e-papierosa o duzej pojemnosci natrafia na Airmez Tornado 15k. To urzadzenie, ktore laczy w sobie wysokosc liczby zaciagnie, zaawansowana technologie parowania oraz atrakcyjny design.</p>
 <h2>Najważniejsze punkty</h2>
 <ul><li>Airmez Tornado 15k to jednorazowy elektroniczny papieros marki AiRMEZ, zaprojektowany z mysla o uzytkownikach ceniacych długotrwalosc i intensywnosc smaku. Urzadzenie wyposazone jest w 15 000 zaciagnie, co plasuje je w grupie wysokopojemnosciowych e-papierosow jednorazowych dostepnych na rynku polskim. Model Tornado wyszla sie przede wszystkim technologie Mesh Coil, ktora zapewnia rownomierne podgrzewanie liquidu i bogatszy smak w porownaniu do tradycyjnych rezystorow bawełnianych.</li><li>Airmez Tornado 15k dedykowany jest zarowno osobom przechodzacy na e-papierosy, jak i doswiadczenym vapingowcom, ktorzy szukaja urzadzenia bez koniecznosci doladowywania czy podlewania. Jednorazowy e papieros Airmez Tornado 15k jest idealnym wyborem dla tych, ktorzy nie chca martwic sie o staly zapas liquidu ani czeste podladowania baterii. Waga kompaktowa i rozmiar dopasowany do dolni sprawiaja, ze Airmez Tornado 15k mozna zabrac wszedzie.</li><li>Marka AiRMEZ od lat specjalizuje sie w produkcji wysokojakosciowych jednorazowych e-papierosow. Jej produkty charakteryzuja sie nienaogrodnoscia, dlugotrwala pracą baterii oraz szeroka oferta smakow. Airmez Tornado 15k to najnowszy dodatek w portfolio marki, stworzony z mysla o uzytkownikach, ktorzy oczekuja jeszcze wiekszej pojemnosci i lepszego smaku.</li></ul>
-<h2>Modele AiRMEZ w sprzedaży</h2><table class="spec-table"><thead><tr><th>Model</th><th>Zaciągnięcia</th><th>Smaki</th><th>Cena od</th></tr></thead><tbody><tr><th>AiRMEZ MATRIX PRO 30000 PUFFS</th><td>30000 puffs</td><td>12 smaków</td><td>od 70 zł</td></tr><tr><th>AiRMEZ LUX 60000 PUFFS</th><td>60000 puffs</td><td>10 smaków</td><td>od 90 zł</td></tr><tr><th>AiRMEZ TORNADO 25000 PUFFS</th><td>25000 puffs</td><td>15 smaków</td><td>od 65 zł</td></tr><tr><th>AiRMEZ FOX 4IN1 120000 PUFFS</th><td>1120000 puffs</td><td>10 smaków</td><td>od 100 zł</td></tr></tbody></table>
+<h2>Modele AiRMEZ w sprzedaży</h2><table class="spec-table"><thead><tr><th>Model</th><th>Zaciągnięcia</th><th>Smaki</th><th>Cena od</th></tr></thead><tbody><tr><th>AiRMEZ MATRIX PRO 30000 PUFFS</th><td>30000 puffs</td><td>12 smaków</td><td>od 70 zł</td></tr><tr><th>AiRMEZ LUX 60000 PUFFS</th><td>60000 puffs</td><td>10 smaków</td><td>od 90 zł</td></tr><tr><th>AiRMEZ TORNADO 25000 PUFFS</th><td>25000 puffs</td><td>15 smaków</td><td>od 65 zł</td></tr><tr><th>AiRMEZ FOX 4IN1 120000 PUFFS</th><td>120000 puffs</td><td>10 smaków</td><td>od 100 zł</td></tr></tbody></table>
 <h2>Przewodnik</h2>
 <h2>Co to jest Airmez Tornado 15k</h2>
 <p>Airmez Tornado 15k to jednorazowy elektroniczny papieros marki AiRMEZ, zaprojektowany z mysla o uzytkownikach ceniacych długotrwalosc i intensywnosc smaku. Urzadzenie wyposazone jest w 15 000 zaciagnie, co plasuje je w grupie wysokopojemnosciowych e-papierosow jednorazowych dostepnych na rynku polskim. Model Tornado wyszla sie przede wszystkim technologie Mesh Coil, ktora zapewnia rownomierne podgrzewanie liquidu i bogatszy smak w porownaniu do tradycyjnych rezystorow bawełnianych.</p><h2>Technologia Mesh Coil w Airmez Tornado 15k</h2>
@@ -69,9 +89,122 @@
     <section class="panel tiers" aria-label="Rabaty ilościowe"><div class="panel-side"></div><div class="panel-main"><h2>Rabaty ilościowe na VapePL.COM</h2><div class="tiers-grid"><div class="tier"><span class="tier-qty">3+ szt.</span><span class="tier-pct">−5%</span></div><div class="tier"><span class="tier-qty">5+ szt.</span><span class="tier-pct">−8%</span></div><div class="tier"><span class="tier-qty">10+ szt.</span><span class="tier-pct">−12%</span></div><div class="tier"><span class="tier-qty">15+ szt.</span><span class="tier-pct">−20%</span></div></div><p class="tiers-note">Im więcej sztuk, tym większa zniżka — rabat nalicza się automatycznie w koszyku.</p><p class="tiers-cta"><a class="btn-buy" href="https://vapepl.com/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=tiers" target="_blank" rel="noopener">Zamów z rabatem na VapePL.COM</a></p></div></section>
     <a class="btn-buy lg" href="https://vapepl.com/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=article-airmez-tornado-15k-jednorazowy-e-papieros-z-technologia-mesh-coil" target="_blank" rel="noopener">Kup AiRMEZ na VapePL.COM</a>
   </article>
-  <aside class="article-side"><aside class="panel rel-articles"><h2>Zobacz również</h2><ul class="link-list"><li><a href="/blog/airmez-30k-puffs-quick-end-kompletny-przewodnik/">Airmez 30K Puffs Quick End — Kompletny Przewodnik</a></li><li><a href="/blog/airmez-4in1-co-to-jest-i-czy-warto/">Airmez 4in1 – co to jest i czy warto?</a></li><li><a href="/blog/airmez-4in1-fox-e-papieros-z-4-smakami-w-jednym-urzadzeniu/">AiRMEZ 4IN1 FOX – e-papieros z 4 smakami w jednym urządzeniu</a></li></ul></aside></aside>
+  <aside class="article-side"><aside class="panel rel-articles"><div class="panel-side"></div><div class="panel-main"><h2>Zobacz również</h2><p class="rel-count">30 powiązanych artykułów</p><ul class="link-list"><li><a href="/blog/airmez-tornado-25000-kompletny-przewodnik-po-wyborze/">AiRMEZ Tornado 25000 – kompletny przewodnik po wyborze</a></li><li><a href="/blog/airmez-tornado-25000-kompletny-przewodnik-po-wyborze-poradnik-ekspercki/">AiRMEZ Tornado 25000 – kompletny przewodnik po wyborze – Poradnik ekspercki</a></li><li><a href="/blog/airmez-tornado-25000-najmocniejszy-jednorazowy-e-papieros/">Airmez Tornado 25000 – Najmocniejszy Jednorazowy E-Papieros</a></li><li><a href="/blog/airmez-tornado-25000-przewodnik-po-najlepszym-jednorazowym-e-papierosie/">AiRMEZ Tornado 25000 – przewodnik po najlepszym jednorazowym e-papierosie</a></li><li><a href="/blog/airmez-tornado-25000-puffs-kompletny-przewodnik-zakupowy-i-recenzja/">Airmez Tornado 25000 Puffs – Kompletny Przewodnik Zakupowy i Recenzja</a></li><li><a href="/blog/airmez-tornado-v5-25000-recenzja-po-testach/">Airmez Tornado V5 25000 — recenzja po testach</a></li><li><a href="/blog/ile-kosztuje-tornado-kompletny-przewodnik-po-cenach-airmez/">Ile Kosztuje Tornado – Kompletny Przewodnik po Cenach Airmez</a></li><li><a href="/blog/czy-airmez-tornado-kupisz-legalnie-gdzie-i-jak-kupic-w-polsce/">Czy AiRMEZ Tornado kupisz legalnie – gdzie i jak kupić w Polsce</a></li><li><a href="/blog/airmez-4in1-jak-dziala-i-dlaczego-warto-wybrac-ten-model/">Airmez 4in1 – jak dziala i dlaczego warto wybrac ten model</a></li><li><a href="/blog/airmez-e-papieros-kompletny-przewodnik-2026-porownanie-modeli-i-rekomendacje/">airmez e papieros – kompletny przewodnik 2026: porównanie modeli i rekomendacje</a></li><li><a href="/blog/airmez-matrix-vape-jak-dziala-i-czy-jest-warte-twojej-uwagi/">Airmez Matrix Vape – Jak Działa i Czy Jest Warte Twojej Uwagi?</a></li><li><a href="/blog/stagbar-airmez-xcor-i-hifancy-znaczenie-marek/">Stagbar, Airmez, XCOR i Hifancy – znaczenie marek</a></li><li><a href="/blog/airmez-e-papieros-przewodnik-po-marce-i-modelach/">Airmez e-papieros – przewodnik po marce i modelach</a></li><li><a href="/blog/airmez-fox-4in1-120000-pelna-recenzja-i-najlepsze-ceny/">Airmez Fox 4in1 120000 – pełna recenzja i najlepsze ceny</a></li><li><a href="/blog/airmez-matrix-pro-30000-vs-merry-mi-blade-30000-porownanie/">Airmez Matrix Pro 30000 vs Merry Mi Blade 30000 Porownanie</a></li><li><a href="/blog/airmez-matrix-vape-wszystko-co-musisz-wiedziec-o-tym-urzadzeniu/">Airmez Matrix vape - wszystko co musisz wiedziec o tym urzadzeniu</a></li><li><a href="/blog/airmez-opinie-czy-warto-kupic-4-linie-e-papierosow/">AiRMEZ opinie: czy warto kupić 4 linie e-papierosów?</a></li><li><a href="/blog/airmez-smak-kompendium-15-smakow-i-porownanie-kosztow-4-linii/">airmez smak: kompendium 15 smaków i porównanie kosztów 4 linii</a></li><li><a href="/blog/merry-mi-blade-120k-vs-airmez-fox-4in1-porownanie/">Merry Mi Blade 120K vs Airmez Fox 4IN1 – porównanie</a></li><li><a href="/blog/airmez-matrix-pro-30000-test-i-poradnik-zuzycia/">AiRMEZ Matrix Pro 30000 – test i poradnik zużycia</a></li><li><a href="/blog/airmez-4in1-co-to-jest-i-czy-warto/">Airmez 4in1 – co to jest i czy warto?</a></li><li><a href="/blog/airmez-matrix-pro-co-warto-wiedziec/">AiRMEZ Matrix Pro – co warto wiedzieć</a></li><li><a href="/blog/airmez-matrix-refill-czy-jednorazowke-daje-sie-napelnic-liquidem/">Airmez Matrix Refill - Czy Jednorazowke Daje Sie Napelnic Liquidem</a></li><li><a href="/blog/airmez-matrix-pro-co-wybrac-gdy-30000-puffs-brakuje/">Airmez matrix pro: co wybrać, gdy 30000 puffs brakuje?</a></li><li><a href="/blog/airmez-30k-puffs-matrix-pro-co-warto-wiedziec/">Airmez 30k Puffs Matrix Pro – co warto wiedzieć</a></li><li><a href="/blog/airmez-4in1-fox-e-papieros-z-4-smakami-w-jednym-urzadzeniu/">AiRMEZ 4IN1 FOX – e-papieros z 4 smakami w jednym urządzeniu</a></li><li><a href="/blog/airmez-4in1-kompletny-przewodnik-po-najlepszym-jednorazowym-e-papierosie/">Airmez 4in1: Kompletny Przewodnik po Najlepszym Jednorazowym E-papierosie</a></li><li><a href="/blog/airmez-60k-recenzja-i-przewodnik-po-60000-puffow/">Airmez 60k – recenzja i przewodnik po 60000 puffów</a></li><li><a href="/blog/airmez-fox-4in1-120-000-pufow-4-smaki-cena/">AiRMEZ FOX 4in1 – 120 000 pufów, 4 smaki, cena</a></li><li><a href="/blog/airmez-matrix-pro-30000-vs-merrymi-blade-30000/">Airmez Matrix Pro 30000 vs MerryMi Blade 30000</a></li></ul></div></aside></aside>
 </div>
-<div class="sticky-cta"><span class="sticky-cta-info">Realizacja i płatność: <b>vapepl.com</b></span><a class="btn-buy" style="text-decoration:none" href="https://vapepl.com/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=sticky" target="_blank" rel="noopener">Kup na VapePL.COM</a></div>
+<section class="block alt article-recos">
+  <div class="block-head"><div><span class="kicker sm">Polecane produkty</span><h2>Dopasowane do tego artykułu</h2></div></div>
+  <div class="grid"><article class="card" data-cat="owocowe" data-fam="fruit">
+  <a class="card-media" href="/produkt/airmez-matrix-pro-30000-puffs-blue-sour-raspberry/"><img src="/assets/img/252304571e1f8a6b-480.webp" alt="AiRMEZ MATRIX PRO 30000 PUFFS — Blue Sour Raspberry" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
+  <div class="card-body">
+    <div class="badges"><span class="badge puffs">30000 puffs</span><span class="badge out">Chwilowo niedostępny</span><span class="badge cat" style="--cc:#16a34a">Owocowe</span></div>
+    <a class="card-title" href="/produkt/airmez-matrix-pro-30000-puffs-blue-sour-raspberry/">AiRMEZ MATRIX PRO 30000 PUFFS — Blue Sour Raspberry</a>
+    <div class="price-row">
+      <span class="price">70 zł</span>
+      <span class="price-old">80 zł</span>
+    </div>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-matrix-pro-30000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-matrix-pro-30000-puffs-blue-sour-raspberry" target="_blank" rel="noopener">Kup na VapePL.COM</a>
+  </div>
+</article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
+  <a class="card-media" href="/produkt/airmez-lux-60000-puffs-blueberry-on-ice/"><img src="/assets/img/8b1d2db326683e50-480.webp" alt="AiRMEZ LUX 60000 PUFFS — BLUEBERRY ON ICE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
+  <div class="card-body">
+    <div class="badges"><span class="badge puffs">60000 puffs</span><span class="badge sale">Promocja!</span><span class="badge hot">−18%</span><span class="badge bestseller">Bestseller</span><span class="badge cat" style="--cc:#0891b2">Ice &amp; Menthol</span></div>
+    <a class="card-title" href="/produkt/airmez-lux-60000-puffs-blueberry-on-ice/">AiRMEZ LUX 60000 PUFFS — BLUEBERRY ON ICE</a>
+    <div class="price-row">
+      <span class="price">90 zł</span>
+      <span class="price-old">110 zł</span>
+    </div>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-blueberry-on-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
+  </div>
+</article><article class="card" data-cat="napoje" data-fam="cola fruit">
+  <a class="card-media" href="/produkt/airmez-lux-60000-puffs-cherry-cola/"><img src="/assets/img/8b1d2db326683e50-480.webp" alt="AiRMEZ LUX 60000 PUFFS — CHERRY COLA" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
+  <div class="card-body">
+    <div class="badges"><span class="badge puffs">60000 puffs</span><span class="badge sale">Promocja!</span><span class="badge hot">−18%</span><span class="badge bestseller">Bestseller</span><span class="badge cat" style="--cc:#d97706">Napoje</span></div>
+    <a class="card-title" href="/produkt/airmez-lux-60000-puffs-cherry-cola/">AiRMEZ LUX 60000 PUFFS — CHERRY COLA</a>
+    <div class="price-row">
+      <span class="price">90 zł</span>
+      <span class="price-old">110 zł</span>
+    </div>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-cherry-cola" target="_blank" rel="noopener">Kup na VapePL.COM</a>
+  </div>
+</article><article class="card" data-cat="napoje" data-fam="sweet">
+  <a class="card-media" href="/produkt/airmez-lux-60000-puffs-dr-blue/"><img src="/assets/img/8b1d2db326683e50-480.webp" alt="AiRMEZ LUX 60000 PUFFS — Dr Blue" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
+  <div class="card-body">
+    <div class="badges"><span class="badge puffs">60000 puffs</span><span class="badge sale">Promocja!</span><span class="badge hot">−18%</span><span class="badge bestseller">Bestseller</span><span class="badge cat" style="--cc:#d97706">Napoje</span></div>
+    <a class="card-title" href="/produkt/airmez-lux-60000-puffs-dr-blue/">AiRMEZ LUX 60000 PUFFS — Dr Blue</a>
+    <div class="price-row">
+      <span class="price">90 zł</span>
+      <span class="price-old">110 zł</span>
+    </div>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-dr-blue" target="_blank" rel="noopener">Kup na VapePL.COM</a>
+  </div>
+</article><article class="card" data-cat="ice-menthol" data-fam="ice fruit sweet">
+  <a class="card-media" href="/produkt/airmez-lux-60000-puffs-dragonfruit-ice/"><img src="/assets/img/8b1d2db326683e50-480.webp" alt="AiRMEZ LUX 60000 PUFFS — DRAGONFRUIT ICE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
+  <div class="card-body">
+    <div class="badges"><span class="badge puffs">60000 puffs</span><span class="badge sale">Promocja!</span><span class="badge hot">−18%</span><span class="badge bestseller">Bestseller</span><span class="badge cat" style="--cc:#0891b2">Ice &amp; Menthol</span></div>
+    <a class="card-title" href="/produkt/airmez-lux-60000-puffs-dragonfruit-ice/">AiRMEZ LUX 60000 PUFFS — DRAGONFRUIT ICE</a>
+    <div class="price-row">
+      <span class="price">90 zł</span>
+      <span class="price-old">110 zł</span>
+    </div>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-dragonfruit-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
+  </div>
+</article><article class="card" data-cat="ice-menthol" data-fam="mint">
+  <a class="card-media" href="/produkt/airmez-lux-60000-puffs-fresh-mint/"><img src="/assets/img/8b1d2db326683e50-480.webp" alt="AiRMEZ LUX 60000 PUFFS — FRESH MINT" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
+  <div class="card-body">
+    <div class="badges"><span class="badge puffs">60000 puffs</span><span class="badge sale">Promocja!</span><span class="badge hot">−18%</span><span class="badge bestseller">Bestseller</span><span class="badge cat" style="--cc:#0891b2">Ice &amp; Menthol</span></div>
+    <a class="card-title" href="/produkt/airmez-lux-60000-puffs-fresh-mint/">AiRMEZ LUX 60000 PUFFS — FRESH MINT</a>
+    <div class="price-row">
+      <span class="price">90 zł</span>
+      <span class="price-old">110 zł</span>
+    </div>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-fresh-mint" target="_blank" rel="noopener">Kup na VapePL.COM</a>
+  </div>
+</article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
+  <a class="card-media" href="/produkt/airmez-lux-60000-puffs-grape-ice/"><img src="/assets/img/8b1d2db326683e50-480.webp" alt="AiRMEZ LUX 60000 PUFFS — Grape ice" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
+  <div class="card-body">
+    <div class="badges"><span class="badge puffs">60000 puffs</span><span class="badge sale">Promocja!</span><span class="badge hot">−18%</span><span class="badge bestseller">Bestseller</span><span class="badge cat" style="--cc:#0891b2">Ice &amp; Menthol</span></div>
+    <a class="card-title" href="/produkt/airmez-lux-60000-puffs-grape-ice/">AiRMEZ LUX 60000 PUFFS — Grape ice</a>
+    <div class="price-row">
+      <span class="price">90 zł</span>
+      <span class="price-old">110 zł</span>
+    </div>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-grape-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
+  </div>
+</article><article class="card" data-cat="owocowe" data-fam="mix">
+  <a class="card-media" href="/produkt/airmez-lux-60000-puffs-mixed-berries/"><img src="/assets/img/8b1d2db326683e50-480.webp" alt="AiRMEZ LUX 60000 PUFFS — Mixed Berries" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
+  <div class="card-body">
+    <div class="badges"><span class="badge puffs">60000 puffs</span><span class="badge sale">Promocja!</span><span class="badge hot">−18%</span><span class="badge bestseller">Bestseller</span><span class="badge cat" style="--cc:#16a34a">Owocowe</span></div>
+    <a class="card-title" href="/produkt/airmez-lux-60000-puffs-mixed-berries/">AiRMEZ LUX 60000 PUFFS — Mixed Berries</a>
+    <div class="price-row">
+      <span class="price">90 zł</span>
+      <span class="price-old">110 zł</span>
+    </div>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-mixed-berries" target="_blank" rel="noopener">Kup na VapePL.COM</a>
+  </div>
+</article><article class="card" data-cat="owocowe" data-fam="fruit">
+  <a class="card-media" href="/produkt/airmez-lux-60000-puffs-passion-fruit-kiwi/"><img src="/assets/img/8b1d2db326683e50-480.webp" alt="AiRMEZ LUX 60000 PUFFS — Passion Fruit Kiwi" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
+  <div class="card-body">
+    <div class="badges"><span class="badge puffs">60000 puffs</span><span class="badge sale">Promocja!</span><span class="badge hot">−18%</span><span class="badge bestseller">Bestseller</span><span class="badge cat" style="--cc:#16a34a">Owocowe</span></div>
+    <a class="card-title" href="/produkt/airmez-lux-60000-puffs-passion-fruit-kiwi/">AiRMEZ LUX 60000 PUFFS — Passion Fruit Kiwi</a>
+    <div class="price-row">
+      <span class="price">90 zł</span>
+      <span class="price-old">110 zł</span>
+    </div>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-passion-fruit-kiwi" target="_blank" rel="noopener">Kup na VapePL.COM</a>
+  </div>
+</article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
+  <a class="card-media" href="/produkt/airmez-lux-60000-puffs-strawberry-ice/"><img src="/assets/img/8b1d2db326683e50-480.webp" alt="AiRMEZ LUX 60000 PUFFS — STRAWBERRY ICE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
+  <div class="card-body">
+    <div class="badges"><span class="badge puffs">60000 puffs</span><span class="badge sale">Promocja!</span><span class="badge hot">−18%</span><span class="badge bestseller">Bestseller</span><span class="badge cat" style="--cc:#0891b2">Ice &amp; Menthol</span></div>
+    <a class="card-title" href="/produkt/airmez-lux-60000-puffs-strawberry-ice/">AiRMEZ LUX 60000 PUFFS — STRAWBERRY ICE</a>
+    <div class="price-row">
+      <span class="price">90 zł</span>
+      <span class="price-old">110 zł</span>
+    </div>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-strawberry-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
+  </div>
+</article></div>
+</section>
 
 </main>
 <footer class="site-foot">

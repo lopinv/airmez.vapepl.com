@@ -30,18 +30,38 @@
 <header class="site-head">
   <div class="wrap head-in">
     <a class="logo" href="/"><span class="logo-mark">V</span>AiRMEZ · VapePL</a>
-    <nav aria-label="Nawigacja główna">
-      <a href="/produkty/">Produkty</a>
-      <a href="/#modele">Modele</a>
-      <a href="/blog/">Blog</a>
-      <a href="/faq/">FAQ</a>
-      <a href="/o-airmez/">O marce</a>
-    </nav>
+    <nav aria-label="Nawigacja główna" class="head-nav"><a href="/produkty/">Produkty</a><a href="/#modele">Modele</a><a href="/blog/">Blog</a><a href="/faq/">FAQ</a><a href="/o-airmez/">O marce</a></nav>
     <a class="head-cta" href="https://vapepl.com/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=header" target="_blank" rel="noopener">Kup na VapePL.COM →</a>
+    <button class="nav-toggle" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
+    </button>
   </div>
 </header>
-<div class="trust-bar wrap" role="note"><span>&#10003; Wysyłka z Polski — realizacja 24–48h</span><span>&#10003; 30 dni na zwrot</span><span>&#10003; Rabaty ilościowe do −20%</span><span>&#10003; Tylko dla osób 18+</span></div>
+<div class="nav-drawer" id="mobile-menu" hidden>
+  <div class="nav-drawer-backdrop" data-nav-close></div>
+  <div class="nav-drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="nav-drawer-head">
+      <span class="nav-drawer-title">Menu</span>
+      <button class="nav-drawer-close" type="button" aria-label="Zamknij menu" data-nav-close>×</button>
+    </div>
+    <nav class="nav-drawer-links" aria-label="Menu mobilne"><a href="/produkty/">Produkty</a><a href="/#modele">Modele</a><a href="/blog/">Blog</a><a href="/faq/">FAQ</a><a href="/o-airmez/">O marce</a></nav>
+    <a class="btn-buy lg nav-drawer-cta" href="https://vapepl.com/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=drawer" target="_blank" rel="noopener">Kup na VapePL.COM →</a>
+  </div>
+</div>
 <main class="wrap">
+<script>
+(function(){
+  var drawer=document.getElementById("mobile-menu");
+  var toggle=document.querySelector(".nav-toggle");
+  function open(){drawer.hidden=false;toggle.setAttribute("aria-expanded","true");document.body.classList.add("nav-open");}
+  function close(){drawer.hidden=true;toggle.setAttribute("aria-expanded","false");document.body.classList.remove("nav-open");}
+  toggle.addEventListener("click",function(){drawer.hidden?open():close();});
+  drawer.addEventListener("click",function(e){if(e.target.hasAttribute("data-nav-close"))close();});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!drawer.hidden)close();});
+  // 同页锚点跳转不会卸载页面，需显式关闭抽屉
+  drawer.querySelectorAll(".nav-drawer-links a").forEach(function(a){a.addEventListener("click",close);});
+})();
+</script>
 <section class="hero"><div class="hero-grid">
   <div class="hero-copy">
     <span class="kicker">Przewodnik marki · AiRMEZ</span>
@@ -90,7 +110,7 @@
       <span class="price">90 zł</span>
       <span class="price-old">110 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-blueberry-on-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-blueberry-on-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="napoje" data-fam="cola fruit">
   <a class="card-media" href="/produkt/airmez-lux-60000-puffs-cherry-cola/"><img src="/assets/img/8b1d2db326683e50-480.webp" alt="AiRMEZ LUX 60000 PUFFS — CHERRY COLA" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -101,7 +121,7 @@
       <span class="price">90 zł</span>
       <span class="price-old">110 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-cherry-cola" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-cherry-cola" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="napoje" data-fam="sweet">
   <a class="card-media" href="/produkt/airmez-lux-60000-puffs-dr-blue/"><img src="/assets/img/8b1d2db326683e50-480.webp" alt="AiRMEZ LUX 60000 PUFFS — Dr Blue" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -112,7 +132,7 @@
       <span class="price">90 zł</span>
       <span class="price-old">110 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-dr-blue" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-dr-blue" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit sweet">
   <a class="card-media" href="/produkt/airmez-lux-60000-puffs-dragonfruit-ice/"><img src="/assets/img/8b1d2db326683e50-480.webp" alt="AiRMEZ LUX 60000 PUFFS — DRAGONFRUIT ICE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -123,7 +143,7 @@
       <span class="price">90 zł</span>
       <span class="price-old">110 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-dragonfruit-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-dragonfruit-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="mint">
   <a class="card-media" href="/produkt/airmez-lux-60000-puffs-fresh-mint/"><img src="/assets/img/8b1d2db326683e50-480.webp" alt="AiRMEZ LUX 60000 PUFFS — FRESH MINT" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -134,7 +154,7 @@
       <span class="price">90 zł</span>
       <span class="price-old">110 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-fresh-mint" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-fresh-mint" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="mix">
   <a class="card-media" href="/produkt/airmez-lux-60000-puffs-mixed-berries/"><img src="/assets/img/8b1d2db326683e50-480.webp" alt="AiRMEZ LUX 60000 PUFFS — Mixed Berries" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -145,7 +165,7 @@
       <span class="price">90 zł</span>
       <span class="price-old">110 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-mixed-berries" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-mixed-berries" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/airmez-lux-60000-puffs-passion-fruit-kiwi/"><img src="/assets/img/8b1d2db326683e50-480.webp" alt="AiRMEZ LUX 60000 PUFFS — Passion Fruit Kiwi" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -156,7 +176,7 @@
       <span class="price">90 zł</span>
       <span class="price-old">110 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-passion-fruit-kiwi" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-passion-fruit-kiwi" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/airmez-lux-60000-puffs-strawberry-ice/"><img src="/assets/img/8b1d2db326683e50-480.webp" alt="AiRMEZ LUX 60000 PUFFS — STRAWBERRY ICE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -167,7 +187,7 @@
       <span class="price">90 zł</span>
       <span class="price-old">110 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-strawberry-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-strawberry-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article></div>
 </section><div id="smaki" class="anchor"></div><section class="block" id="kat-owocowe" data-cat-sec="owocowe">
@@ -181,7 +201,7 @@
       <span class="price">70 zł</span>
       <span class="price-old">80 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-matrix-pro-30000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-matrix-pro-30000-puffs-blue-sour-raspberry" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-matrix-pro-30000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-matrix-pro-30000-puffs-blue-sour-raspberry" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/airmez-matrix-pro-30000-puffs-blueberry-raspberry/"><img src="/assets/img/252304571e1f8a6b-480.webp" alt="AiRMEZ MATRIX PRO 30000 PUFFS — BLUEBERRY RASPBERRY" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -192,7 +212,7 @@
       <span class="price">70 zł</span>
       <span class="price-old">80 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-matrix-pro-30000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-matrix-pro-30000-puffs-blueberry-raspberry" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-matrix-pro-30000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-matrix-pro-30000-puffs-blueberry-raspberry" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit sweet">
   <a class="card-media" href="/produkt/airmez-matrix-pro-30000-puffs-dragon-fruit/"><img src="/assets/img/252304571e1f8a6b-480.webp" alt="AiRMEZ MATRIX PRO 30000 PUFFS — Dragon Fruit" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -203,7 +223,7 @@
       <span class="price">70 zł</span>
       <span class="price-old">80 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-matrix-pro-30000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-matrix-pro-30000-puffs-dragon-fruit" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-matrix-pro-30000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-matrix-pro-30000-puffs-dragon-fruit" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/airmez-matrix-pro-30000-puffs-kiwi-passion-fruit-guava/"><img src="/assets/img/252304571e1f8a6b-480.webp" alt="AiRMEZ MATRIX PRO 30000 PUFFS — Kiwi Passion Fruit Guava" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -214,7 +234,7 @@
       <span class="price">70 zł</span>
       <span class="price-old">80 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-matrix-pro-30000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-matrix-pro-30000-puffs-kiwi-passion-fruit-guava" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-matrix-pro-30000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-matrix-pro-30000-puffs-kiwi-passion-fruit-guava" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/airmez-matrix-pro-30000-puffs-lemon-lime-2/"><img src="/assets/img/252304571e1f8a6b-480.webp" alt="AiRMEZ MATRIX PRO 30000 PUFFS — Lemon &amp; Lime" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -225,7 +245,7 @@
       <span class="price">70 zł</span>
       <span class="price-old">80 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-matrix-pro-30000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-matrix-pro-30000-puffs-lemon-lime-2" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-matrix-pro-30000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-matrix-pro-30000-puffs-lemon-lime-2" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/airmez-matrix-pro-30000-puffs-mixed-berry/"><img src="/assets/img/252304571e1f8a6b-480.webp" alt="AiRMEZ MATRIX PRO 30000 PUFFS — MIXED BERRY" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -236,7 +256,7 @@
       <span class="price">70 zł</span>
       <span class="price-old">80 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-matrix-pro-30000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-matrix-pro-30000-puffs-mixed-berry" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-matrix-pro-30000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-matrix-pro-30000-puffs-mixed-berry" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/airmez-matrix-pro-30000-puffs-strawberry-kiwi/"><img src="/assets/img/252304571e1f8a6b-480.webp" alt="AiRMEZ MATRIX PRO 30000 PUFFS — Strawberry Kiwi" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -247,7 +267,7 @@
       <span class="price">70 zł</span>
       <span class="price-old">80 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-matrix-pro-30000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-matrix-pro-30000-puffs-strawberry-kiwi" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-matrix-pro-30000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-matrix-pro-30000-puffs-strawberry-kiwi" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/airmez-tornado-25000-puffs-cherry/"><img src="/assets/img/4ee77bea91148eac-480.webp" alt="AiRMEZ TORNADO 25000 PUFFS — Cherry" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -258,7 +278,7 @@
       <span class="price">65 zł</span>
       <span class="price-old">75 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-cherry" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-cherry" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit sweet">
   <a class="card-media" href="/produkt/airmez-tornado-25000-puffs-dragon-fruit/"><img src="/assets/img/4ee77bea91148eac-480.webp" alt="AiRMEZ TORNADO 25000 PUFFS — Dragon Fruit" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -269,7 +289,7 @@
       <span class="price">65 zł</span>
       <span class="price-old">75 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-dragon-fruit" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-dragon-fruit" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/airmez-tornado-25000-puffs-kiwi-passion-fruit-guava/"><img src="/assets/img/4ee77bea91148eac-480.webp" alt="AiRMEZ TORNADO 25000 PUFFS — Kiwi Passion Fruit Guava" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -280,7 +300,7 @@
       <span class="price">65 zł</span>
       <span class="price-old">75 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-kiwi-passion-fruit-guava" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-kiwi-passion-fruit-guava" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/airmez-tornado-25000-puffs-lemon-lime/"><img src="/assets/img/4ee77bea91148eac-480.webp" alt="AiRMEZ TORNADO 25000 PUFFS — LEMON LIME" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -291,7 +311,7 @@
       <span class="price">65 zł</span>
       <span class="price-old">75 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-lemon-lime" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-lemon-lime" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="mix">
   <a class="card-media" href="/produkt/airmez-tornado-25000-puffs-mixed-berries/"><img src="/assets/img/4ee77bea91148eac-480.webp" alt="AiRMEZ TORNADO 25000 PUFFS — Mixed Berries" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -302,7 +322,7 @@
       <span class="price">65 zł</span>
       <span class="price-old">75 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-mixed-berries" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-mixed-berries" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/airmez-tornado-25000-puffs-peach-mango/"><img src="/assets/img/4ee77bea91148eac-480.webp" alt="AiRMEZ TORNADO 25000 PUFFS — peach mango" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -313,7 +333,7 @@
       <span class="price">65 zł</span>
       <span class="price-old">75 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-peach-mango" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-peach-mango" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/airmez-tornado-25000-puffs-sour-apple/"><img src="/assets/img/4ee77bea91148eac-480.webp" alt="AiRMEZ TORNADO 25000 PUFFS — Sour Apple" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -324,7 +344,7 @@
       <span class="price">65 zł</span>
       <span class="price-old">75 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-sour-apple" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-sour-apple" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/airmez-tornado-25000-puffs-strawberry-watermelon/"><img src="/assets/img/4ee77bea91148eac-480.webp" alt="AiRMEZ TORNADO 25000 PUFFS — Strawberry Watermelon" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -335,7 +355,7 @@
       <span class="price">65 zł</span>
       <span class="price-old">75 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-strawberry-watermelon" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-strawberry-watermelon" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/airmez-tornado-25000-puffs-triple-berry/"><img src="/assets/img/4ee77bea91148eac-480.webp" alt="AiRMEZ TORNADO 25000 PUFFS — TRIPLE BERRY" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -346,7 +366,7 @@
       <span class="price">65 zł</span>
       <span class="price-old">75 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-triple-berry" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-triple-berry" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit sweet">
   <a class="card-media" href="/produkt/airmez-fox-4in1-120000-puffs-peach-mango-watermelon-blueberry-cherry-watermelon-dragon-fruit-passion-kiss/"><img src="/assets/img/5b733e518857bdaf-480.webp" alt="AiRMEZ FOX 4IN1 120000 PUFFS — Peach Mango Watermelon/Blueberry Cherry/Watermelon Dragon Fruit/Passion Kiss" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -357,7 +377,7 @@
       <span class="price">100 zł</span>
       <span class="price-old">120 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-fox-4in1-120000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-fox-4in1-120000-puffs-peach-mango-watermelon-blueberry-cherry-watermelon-dragon-fruit-passion-kiss" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-fox-4in1-120000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-fox-4in1-120000-puffs-peach-mango-watermelon-blueberry-cherry-watermelon-dragon-fruit-passion-kiss" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="mix">
   <a class="card-media" href="/produkt/airmez-lux-60000-puffs-mixed-berries/"><img src="/assets/img/8b1d2db326683e50-480.webp" alt="AiRMEZ LUX 60000 PUFFS — Mixed Berries" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -368,7 +388,7 @@
       <span class="price">90 zł</span>
       <span class="price-old">110 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-mixed-berries" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-mixed-berries" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/airmez-lux-60000-puffs-passion-fruit-kiwi/"><img src="/assets/img/8b1d2db326683e50-480.webp" alt="AiRMEZ LUX 60000 PUFFS — Passion Fruit Kiwi" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -379,7 +399,7 @@
       <span class="price">90 zł</span>
       <span class="price-old">110 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-passion-fruit-kiwi" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-passion-fruit-kiwi" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article></div>
   </section><section class="block" id="kat-ice-menthol" data-cat-sec="ice-menthol">
@@ -393,7 +413,7 @@
       <span class="price">70 zł</span>
       <span class="price-old">80 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-matrix-pro-30000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-matrix-pro-30000-puffs-blueberry-on-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-matrix-pro-30000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-matrix-pro-30000-puffs-blueberry-on-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/airmez-matrix-pro-30000-puffs-grape-ice/"><img src="/assets/img/252304571e1f8a6b-480.webp" alt="AiRMEZ MATRIX PRO 30000 PUFFS — Grape ice" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -404,7 +424,7 @@
       <span class="price">70 zł</span>
       <span class="price-old">80 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-matrix-pro-30000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-matrix-pro-30000-puffs-grape-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-matrix-pro-30000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-matrix-pro-30000-puffs-grape-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/airmez-matrix-pro-30000-puffs-strawberry-ice/"><img src="/assets/img/252304571e1f8a6b-480.webp" alt="AiRMEZ MATRIX PRO 30000 PUFFS — STRAWBERRY ICE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -415,7 +435,7 @@
       <span class="price">70 zł</span>
       <span class="price-old">80 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-matrix-pro-30000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-matrix-pro-30000-puffs-strawberry-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-matrix-pro-30000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-matrix-pro-30000-puffs-strawberry-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/airmez-matrix-pro-30000-puffs-watermelon-ice/"><img src="/assets/img/252304571e1f8a6b-480.webp" alt="AiRMEZ MATRIX PRO 30000 PUFFS — WATERMELON ICE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -426,7 +446,7 @@
       <span class="price">70 zł</span>
       <span class="price-old">80 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-matrix-pro-30000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-matrix-pro-30000-puffs-watermelon-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-matrix-pro-30000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-matrix-pro-30000-puffs-watermelon-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/airmez-tornado-25000-puffs-blueberry-on-ice/"><img src="/assets/img/4ee77bea91148eac-480.webp" alt="AiRMEZ TORNADO 25000 PUFFS — BLUEBERRY ON ICE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -437,7 +457,7 @@
       <span class="price">65 zł</span>
       <span class="price-old">75 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-blueberry-on-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-blueberry-on-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/airmez-tornado-25000-puffs-grape-ice/"><img src="/assets/img/4ee77bea91148eac-480.webp" alt="AiRMEZ TORNADO 25000 PUFFS — Grape ice" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -448,7 +468,7 @@
       <span class="price">65 zł</span>
       <span class="price-old">75 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-grape-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-grape-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice">
   <a class="card-media" href="/produkt/airmez-tornado-25000-puffs-lush-ice/"><img src="/assets/img/4ee77bea91148eac-480.webp" alt="AiRMEZ TORNADO 25000 PUFFS — LUSH ICE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -459,7 +479,7 @@
       <span class="price">65 zł</span>
       <span class="price-old">75 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-lush-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-lush-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/airmez-tornado-25000-puffs-peach-ice/"><img src="/assets/img/4ee77bea91148eac-480.webp" alt="AiRMEZ TORNADO 25000 PUFFS — PEACH ICE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -470,7 +490,7 @@
       <span class="price">65 zł</span>
       <span class="price-old">75 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-peach-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-peach-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/airmez-tornado-25000-puffs-strawberry-ice/"><img src="/assets/img/4ee77bea91148eac-480.webp" alt="AiRMEZ TORNADO 25000 PUFFS — STRAWBERRY ICE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -481,7 +501,7 @@
       <span class="price">65 zł</span>
       <span class="price-old">75 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-strawberry-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-strawberry-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit sweet">
   <a class="card-media" href="/produkt/airmez-fox-4in1-120000-puffs-cherry-love-66-berry-lemonade-grape-ice/"><img src="/assets/img/5b733e518857bdaf-480.webp" alt="AiRMEZ FOX 4IN1 120000 PUFFS — Cherry/Love 66/Berry Lemonade/Grape Ice" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -492,7 +512,7 @@
       <span class="price">100 zł</span>
       <span class="price-old">120 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-fox-4in1-120000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-fox-4in1-120000-puffs-cherry-love-66-berry-lemonade-grape-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-fox-4in1-120000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-fox-4in1-120000-puffs-cherry-love-66-berry-lemonade-grape-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit sweet">
   <a class="card-media" href="/produkt/airmez-fox-4in1-120000-puffs-grape-ice-love-66-blueberry-on-ice-dragonfruit-ice/"><img src="/assets/img/5b733e518857bdaf-480.webp" alt="AiRMEZ FOX 4IN1 120000 PUFFS — Grape Ice/Love 66/Blueberry On Ice/Dragonfruit Ice" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -503,7 +523,7 @@
       <span class="price">100 zł</span>
       <span class="price-old">120 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-fox-4in1-120000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-fox-4in1-120000-puffs-grape-ice-love-66-blueberry-on-ice-dragonfruit-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-fox-4in1-120000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-fox-4in1-120000-puffs-grape-ice-love-66-blueberry-on-ice-dragonfruit-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/airmez-fox-4in1-120000-puffs-love-66-cherry-blueberry-on-ice-kiwi-passion-fruit-guava/"><img src="/assets/img/5b733e518857bdaf-480.webp" alt="AiRMEZ FOX 4IN1 120000 PUFFS — Love 66/Cherry/Blueberry On Ice/Kiwi Passion Fruit Guava" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -514,7 +534,7 @@
       <span class="price">100 zł</span>
       <span class="price-old">120 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-fox-4in1-120000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-fox-4in1-120000-puffs-love-66-cherry-blueberry-on-ice-kiwi-passion-fruit-guava" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-fox-4in1-120000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-fox-4in1-120000-puffs-love-66-cherry-blueberry-on-ice-kiwi-passion-fruit-guava" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit sweet">
   <a class="card-media" href="/produkt/airmez-fox-4in1-120000-puffs-mango-peach-tropical-fruit-peach-ice-sour-mango-pineapple/"><img src="/assets/img/5b733e518857bdaf-480.webp" alt="AiRMEZ FOX 4IN1 120000 PUFFS — Mango Peach/Tropical Fruit/Peach Ice/Sour Mango Pineapple" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -525,7 +545,7 @@
       <span class="price">100 zł</span>
       <span class="price-old">120 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-fox-4in1-120000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-fox-4in1-120000-puffs-mango-peach-tropical-fruit-peach-ice-sour-mango-pineapple" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-fox-4in1-120000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-fox-4in1-120000-puffs-mango-peach-tropical-fruit-peach-ice-sour-mango-pineapple" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit sweet">
   <a class="card-media" href="/produkt/airmez-fox-4in1-120000-puffs-peach-ice-pink-lemonade-watermelon-ice-dr-blue/"><img src="/assets/img/5b733e518857bdaf-480.webp" alt="AiRMEZ FOX 4IN1 120000 PUFFS — Peach Ice/Pink Lemonade/Watermelon Ice/Dr Blue" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -536,7 +556,7 @@
       <span class="price">100 zł</span>
       <span class="price-old">120 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-fox-4in1-120000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-fox-4in1-120000-puffs-peach-ice-pink-lemonade-watermelon-ice-dr-blue" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-fox-4in1-120000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-fox-4in1-120000-puffs-peach-ice-pink-lemonade-watermelon-ice-dr-blue" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/airmez-fox-4in1-120000-puffs-strawberry-raspberry-strawberry-kiwi-strawberry-ice-peach-mango-watermelon/"><img src="/assets/img/5b733e518857bdaf-480.webp" alt="AiRMEZ FOX 4IN1 120000 PUFFS — Strawberry Raspberry/Strawberry Kiwi/Strawberry Ice/Peach Mango Watermelon" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -547,7 +567,7 @@
       <span class="price">100 zł</span>
       <span class="price-old">120 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-fox-4in1-120000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-fox-4in1-120000-puffs-strawberry-raspberry-strawberry-kiwi-strawberry-ice-peach-mango-watermelon" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-fox-4in1-120000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-fox-4in1-120000-puffs-strawberry-raspberry-strawberry-kiwi-strawberry-ice-peach-mango-watermelon" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/airmez-fox-4in1-120000-puffs-watermelon-ice-strawberry-watermelon-raspberry-watermelon-blueberry-raspberry/"><img src="/assets/img/5b733e518857bdaf-480.webp" alt="AiRMEZ FOX 4IN1 120000 PUFFS — Watermelon Ice/Strawberry Watermelon/Raspberry Watermelon/Blueberry Raspberry" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -558,7 +578,7 @@
       <span class="price">100 zł</span>
       <span class="price-old">120 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-fox-4in1-120000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-fox-4in1-120000-puffs-watermelon-ice-strawberry-watermelon-raspberry-watermelon-blueberry-raspberry" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-fox-4in1-120000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-fox-4in1-120000-puffs-watermelon-ice-strawberry-watermelon-raspberry-watermelon-blueberry-raspberry" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/airmez-lux-60000-puffs-blueberry-on-ice/"><img src="/assets/img/8b1d2db326683e50-480.webp" alt="AiRMEZ LUX 60000 PUFFS — BLUEBERRY ON ICE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -569,7 +589,7 @@
       <span class="price">90 zł</span>
       <span class="price-old">110 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-blueberry-on-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-blueberry-on-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit sweet">
   <a class="card-media" href="/produkt/airmez-lux-60000-puffs-dragonfruit-ice/"><img src="/assets/img/8b1d2db326683e50-480.webp" alt="AiRMEZ LUX 60000 PUFFS — DRAGONFRUIT ICE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -580,7 +600,7 @@
       <span class="price">90 zł</span>
       <span class="price-old">110 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-dragonfruit-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-dragonfruit-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="mint">
   <a class="card-media" href="/produkt/airmez-lux-60000-puffs-fresh-mint/"><img src="/assets/img/8b1d2db326683e50-480.webp" alt="AiRMEZ LUX 60000 PUFFS — FRESH MINT" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -591,7 +611,7 @@
       <span class="price">90 zł</span>
       <span class="price-old">110 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-fresh-mint" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-fresh-mint" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/airmez-lux-60000-puffs-strawberry-ice/"><img src="/assets/img/8b1d2db326683e50-480.webp" alt="AiRMEZ LUX 60000 PUFFS — STRAWBERRY ICE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -602,7 +622,7 @@
       <span class="price">90 zł</span>
       <span class="price-old">110 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-strawberry-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-strawberry-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/airmez-lux-60000-puffs-watermelon-ice/"><img src="/assets/img/8b1d2db326683e50-480.webp" alt="AiRMEZ LUX 60000 PUFFS — WATERMELON ICE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -613,7 +633,7 @@
       <span class="price">90 zł</span>
       <span class="price-old">110 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-watermelon-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-watermelon-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/airmez-lux-60000-puffs-grape-ice/"><img src="/assets/img/8b1d2db326683e50-480.webp" alt="AiRMEZ LUX 60000 PUFFS — Grape ice" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -624,7 +644,7 @@
       <span class="price">90 zł</span>
       <span class="price-old">110 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-grape-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-grape-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article></div>
   </section><section class="block" id="kat-napoje" data-cat-sec="napoje">
@@ -638,7 +658,7 @@
       <span class="price">70 zł</span>
       <span class="price-old">80 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-matrix-pro-30000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-matrix-pro-30000-puffs-cherry-cola" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-matrix-pro-30000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-matrix-pro-30000-puffs-cherry-cola" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="napoje" data-fam="fruit sweet">
   <a class="card-media" href="/produkt/airmez-tornado-25000-puffs-berry-lemonade/"><img src="/assets/img/4ee77bea91148eac-480.webp" alt="AiRMEZ TORNADO 25000 PUFFS — Berry Lemonade" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -649,7 +669,7 @@
       <span class="price">65 zł</span>
       <span class="price-old">75 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-berry-lemonade" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-tornado-25000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-tornado-25000-puffs-berry-lemonade" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="napoje" data-fam="fruit sweet">
   <a class="card-media" href="/produkt/airmez-fox-4in1-120000-puffs-pink-lemonade-passion-kiss-mixed-berries-triple-berry/"><img src="/assets/img/5b733e518857bdaf-480.webp" alt="AiRMEZ FOX 4IN1 120000 PUFFS — Pink Lemonade/Passion Kiss/Mixed Berries/Triple Berry" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -660,7 +680,7 @@
       <span class="price">100 zł</span>
       <span class="price-old">120 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-fox-4in1-120000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-fox-4in1-120000-puffs-pink-lemonade-passion-kiss-mixed-berries-triple-berry" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-fox-4in1-120000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-fox-4in1-120000-puffs-pink-lemonade-passion-kiss-mixed-berries-triple-berry" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="napoje" data-fam="fruit sweet">
   <a class="card-media" href="/produkt/airmez-fox-4in1-120000-puffs-red-mojito-love-66-mixed-berries-strawberry-watermelon/"><img src="/assets/img/5b733e518857bdaf-480.webp" alt="AiRMEZ FOX 4IN1 120000 PUFFS — Red Mojito/Love 66/Mixed Berries/Strawberry Watermelon" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -671,7 +691,7 @@
       <span class="price">100 zł</span>
       <span class="price-old">120 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-fox-4in1-120000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-fox-4in1-120000-puffs-red-mojito-love-66-mixed-berries-strawberry-watermelon" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-fox-4in1-120000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-fox-4in1-120000-puffs-red-mojito-love-66-mixed-berries-strawberry-watermelon" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="napoje" data-fam="cola fruit">
   <a class="card-media" href="/produkt/airmez-lux-60000-puffs-cherry-cola/"><img src="/assets/img/8b1d2db326683e50-480.webp" alt="AiRMEZ LUX 60000 PUFFS — CHERRY COLA" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -682,7 +702,7 @@
       <span class="price">90 zł</span>
       <span class="price-old">110 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-cherry-cola" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-cherry-cola" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="napoje" data-fam="sweet">
   <a class="card-media" href="/produkt/airmez-lux-60000-puffs-dr-blue/"><img src="/assets/img/8b1d2db326683e50-480.webp" alt="AiRMEZ LUX 60000 PUFFS — Dr Blue" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -693,7 +713,7 @@
       <span class="price">90 zł</span>
       <span class="price-old">110 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-dr-blue" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/airmez-lux-60000-puffs/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-airmez-lux-60000-puffs-dr-blue" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article></div>
   </section><section class="block alt" id="modele">
@@ -906,6 +926,13 @@
     </article></div>
   </div>
 </section><section class="block"><div class="block-head"><div><span class="kicker sm">Poradniki</span><h2>Blog AiRMEZ</h2></div><a class="more" href="/blog/">Wszystkie wpisy →</a></div><div class="article-grid"><article class="article-card">
+  <a class="article-link" href="/blog/airmez-30k-puffs-matrix-pro-co-warto-wiedziec/">
+    <span class="article-kicker">2026-09-08</span>
+    <h3>Airmez 30k Puffs Matrix Pro – co warto wiedzieć</h3>
+    <p>TL;DR – krótko i na temat: AiRMEZ MATRIX PRO 30000 PUFFS (70 zł, 25 ml płynu, bateria 850 mAh, 10 wyrazistych aromatów, zaciąganie MTL) jest w naszym</p>
+    <span class="article-more">Czytaj dalej <span aria-hidden="true">→</span></span>
+  </a>
+</article><article class="article-card">
   <a class="article-link" href="/blog/airmez-30k-puffs-quick-end-kompletny-przewodnik/">
     <span class="article-kicker">2026-08-30</span>
     <h3>Airmez 30K Puffs Quick End — Kompletny Przewodnik</h3>
@@ -940,20 +967,13 @@
     <p>⚠️ Tylko dla osob powyzej 18. roku zycia: Sprzedaz e-papierosów osobom ponizej 18. roku zycia jest zabroniona zgodnie z polskim prawem.</p>
     <span class="article-more">Czytaj dalej <span aria-hidden="true">→</span></span>
   </a>
-</article><article class="article-card">
-  <a class="article-link" href="/blog/airmez-60k-kompletny-przewodnik-po-jednorazowce/">
-    <span class="article-kicker">2026-08-31</span>
-    <h3>Airmez 60k – kompletny przewodnik po jednorazowce</h3>
-    <p>Airmez 60k to jeden z najpopularniejszych jednorazowych e papierosow dostepnych obecnie na polskim rynku.</p>
-    <span class="article-more">Czytaj dalej <span aria-hidden="true">→</span></span>
-  </a>
 </article></div></section><section class="block alt" id="faq"><div class="block-head"><div><span class="kicker sm">Masz pytania?</span><h2>Częste pytania</h2></div><a class="more" href="/faq/">Pełne FAQ →</a></div><div class="faq-list"><details><summary>Ile kosztują produkty AiRMEZ na vapepl.com?</summary><div class='faq-a'>Aktualne ceny AiRMEZ zaczynają się od 65 zł i sięgają 100 zł za sztukę. Przy zakupie 3+ sztuk rabat rośnie do −20% przy 15+ sztukach. Wszystkie zamówienia realizuje vapepl.com.</div></details><details><summary>Ile zaciągnięć oferuje AiRMEZ?</summary><div class='faq-a'>Liczba zaciągnięć zależy od modelu — od 25 000 do 120 000 puffs. Szczegóły każdej serii znajdziesz na stronie modelu.</div></details><details><summary>Jakie modele AiRMEZ są dostępne?</summary><div class='faq-a'>W sprzedaży dostępne są modele: AiRMEZ MATRIX PRO 30000 PUFFS, AiRMEZ LUX 60000 PUFFS, AiRMEZ TORNADO 25000 PUFFS, AiRMEZ FOX 4IN1 120000 PUFFS. Każdy model występuje w wielu wariantach smakowych — pełną listę znajdziesz w zakładce Produkty.</div></details><details><summary>Czy rabaty ilościowe działają automatycznie?</summary><div class='faq-a'>Tak. Rabat nalicza się automatycznie w koszyku na vapepl.com: 3+ szt. −5%, 5+ szt. −8%, 10+ szt. −12%, 15+ szt. −20%.</div></details><details><summary>Czy strona sprzedaje produkty?</summary><div class='faq-a'>Nie. Ten serwis to przewodnik po produktach AiRMEZ — zamawianie i płatność odbywają się wyłącznie na vapepl.com.</div></details></div></section><section class="cta-panel">
   <div class="cta-panel-in">
     <h2>Gotowy na zamówienie?</h2>
     <p>Realizacja i płatność wyłącznie na <strong>vapepl.com</strong> — rabaty do −20% naliczają się automatycznie w koszyku.</p>
     <a class="btn-buy lg" href="https://vapepl.com/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=cta-final" target="_blank" rel="noopener">Kup AiRMEZ na VapePL.COM</a>
   </div>
-</section><div class="sticky-cta"><span class="sticky-cta-info">Realizacja i płatność: <b>vapepl.com</b></span><a class="btn-buy" style="text-decoration:none" href="https://vapepl.com/?utm_source=airmez&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=sticky" target="_blank" rel="noopener">Kup na VapePL.COM</a></div>
+</section>
 </main>
 <footer class="site-foot">
   <div class="wrap">
